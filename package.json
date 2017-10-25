@@ -67,7 +67,7 @@
   "devDependencies": {
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
-    "@angular/cli": "1.4.7",
+    "@angular/cli": "1.4.9",
     "@angular/language-service": "^4.2.3",
     "@angular/compiler-cli": "^4.0.0",
     "codelyzer": "3.0.1",
