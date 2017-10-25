@@ -46,31 +46,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="authService.showObjHTML('project', 'read')" class="card noborder">
-      <div class="" role="tab" id="headingthree">
-        <a data-toggle="collapse" class="nav-link" data-parent="#accordion" href="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
-            <span class="fa fa10 fa-tty" aria-hidden="true"></span> {{'Services'|translate}}
-        </a>
-      </div>
-      <div id="collapsethree" class="collapse" role="tabpanel" aria-labelledby="headingthree">
-        <div class="card-block">
-          <div class="panel-body">
-            <div *ngFor="let ownerCompanie of fetchedUser.ownerCompanies">
-              <div>
-                <table class="table">
-                  <tr *ngFor="let categProjectSingle of ownerCompanie.categories.categProject; let i=index;">
-                    <td *ngIf="categProjectSingle.isFlagged" class="nav-item subItem">
-                      <a class="nav-link" [routerLink]="['/project/new/' + i]" routerLinkActive="active"> {{categProjectSingle.categ}}
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <div class="card noborder">
       <div class="" role="tab" id="headingFive">
         <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">

@@ -90,6 +90,7 @@ export class SidebarComponent implements OnInit {
   getUser(id: string) {
 
     this.fetchedUser = this.authService.getCurrentUser()
+    
     // console.log(this.fetchedUser)
     // let this2 = this
     // setTimeout(function(){
