@@ -57,28 +57,28 @@ var companie = new Schema({
     //   categProject:{type: String, default: ['']}
     // },
     typeUsers:[{value:{type: String}}],
-    // categories: {
-    //   categProduct:[{
-    //     categ: {type: String, default: ['']},
-    //     isFlagged: {type: Boolean, default: [false]},
-    //     subCateg:[{
-    //       categ: {type: String, default: ['']},
-    //       subCateg:[{
-    //         categ: {type: String, default: ['']},
-    //       }]
-    //     }]
-    //   }],
-    //   categProject:[{
-    //     categ: {type: String, default: ['']},
-    //     isFlagged: {type: Boolean, default: [false]},
-    //     subCateg:[{
-    //       categ: {type: String, default: ['']},
-    //       subCateg:[{
-    //         categ: {type: String, default: ['']},
-    //       }]
-    //     }]
-    //   }]
-    // }
+    categories: {
+      categProduct:[{
+        categ: {type: String, default: ['']},
+        isFlagged: {type: Boolean, default: [false]},
+        subCateg:[{
+          categ: {type: String, default: ['']},
+          subCateg:[{
+            categ: {type: String, default: ['']},
+          }]
+        }]
+      }],
+      categProject:[{
+        categ: {type: String, default: ['']},
+        isFlagged: {type: Boolean, default: [false]},
+        subCateg:[{
+          categ: {type: String, default: ['']},
+          subCateg:[{
+            categ: {type: String, default: ['']},
+          }]
+        }]
+      }]
+    }
 
 
   },
