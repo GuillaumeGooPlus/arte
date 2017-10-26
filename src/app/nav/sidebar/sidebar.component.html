@@ -34,43 +34,14 @@
                     {{'Customers'|translate}}</a>
                 </td>
               </tr>
-              <tr *ngIf="authService.showObjHTML('companie', 'read')">
-                <td class="nav-item subItem">
-                  <a class="nav-link" [routerLink]="['/companie']" routerLinkActive="active">
-                    {{'Suppliers'|translate}}</a>
-                </td>
-              </tr>
+
 
             </table>
           </div>
         </div>
       </div>
     </div>
-    <div *ngIf="authService.showObjHTML('project', 'read')" class="card noborder">
-      <div class="" role="tab" id="headingthree">
-        <a data-toggle="collapse" class="nav-link" data-parent="#accordion" href="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
-            <span class="fa fa10 fa-tty" aria-hidden="true"></span> {{'Services'|translate}}
-        </a>
-      </div>
-      <div id="collapsethree" class="collapse" role="tabpanel" aria-labelledby="headingthree">
-        <div class="card-block">
-          <div class="panel-body">
-            <div *ngFor="let ownerCompanie of fetchedUser.ownerCompanies">
-              <div>
-                <table class="table">
-                  <tr *ngFor="let categProjectSingle of ownerCompanie.categories.categProject; let i=index;">
-                    <td *ngIf="categProjectSingle.isFlagged" class="nav-item subItem">
-                      <a class="nav-link" [routerLink]="['/project/new/' + i]" routerLinkActive="active"> {{categProjectSingle.categ}}
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="card noborder">
       <div class="" role="tab" id="headingFive">
         <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
@@ -100,15 +71,7 @@
 
 
 
-    <div *ngIf="authService.showObjHTML('userCalendar', 'read')" class="card noborder">
-      <div class="" role="tab" id="headingFifteen">
-        <a [routerLink]="['/userCalendar']" routerLinkActive="active" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen">
-              <span class="fa fa10 fa-calendar" aria-hidden="true"></span> {{'Planning'|translate}}
-            </a>
-      </div>
-      <div id="collapseFifteen" class="collapse" role="tabpanel" aria-labelledby="headingFifteen">
-      </div>
-    </div>
+
     <div *ngIf="authService.showObjHTML('quote', 'read')" class="card noborder">
       <div class="" role="tab" id="headingTen">
         <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
@@ -140,38 +103,8 @@
           <span class="fa fa10 fa-cubes" aria-hidden="true"></span> {{'Products'|translate}}</a>
       </div>
     </div>
-    <div *ngIf="authService.showObjHTML('paiementQuote', 'read')" class="card noborder">
-      <div class="" role="tab" id="headingTwo">
-        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <span class="fa fa10 fa-university" aria-hidden="true"></span> {{'Accountancy'|translate}}
-        </a>
-      </div>
-      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-        <div class="card-block">
-          <div class="panel-body">
-            <table class="table">
-              <tr>
-                <td class="nav-item subItem">
-                  <a class="nav-link" [routerLink]="['/paiementQuote/false']" routerLinkActive="active">{{'Payments'|translate}}</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="nav-item subItem">
-                  <a class="nav-link" [routerLink]="['/paiementQuote/true']" routerLinkActive="active">{{'Expenses'|translate}}</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div *ngIf="authService.showObjHTML('reporting', 'read')" class="card noborder">
-      <div class="">
-        <a [routerLink]="['/reporting']" data-toggle="collapse" routerLinkActive="active" class="nav-link" data-parent="#accordion">
-          <span class="fa fa10 fa-bar-chart" aria-hidden="true"></span> {{'Reporting'|translate}}
-        </a>
-      </div>
-    </div>
+
+
     <div *ngIf="
       authService.showObjHTML('companie', 'read') ||
       authService.showObjHTML('right', 'read') ||
